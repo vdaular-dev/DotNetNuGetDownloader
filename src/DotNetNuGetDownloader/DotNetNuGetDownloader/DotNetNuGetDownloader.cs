@@ -10,6 +10,7 @@ using NuGet.Packaging;
 using NuGet.Packaging.Signing;
 using NuGet.Protocol.Core.Types;
 using NuGet.Versioning;
+using NuGet.PackageManagement;
 
 namespace DotNetNuGetDownloader;
 
