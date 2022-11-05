@@ -11,6 +11,7 @@ using NuGet.Packaging.Signing;
 using NuGet.Protocol.Core.Types;
 using NuGet.Versioning;
 using NuGet.PackageManagement;
+using NuGet.Resolver;
 
 namespace DotNetNuGetDownloader;
 
