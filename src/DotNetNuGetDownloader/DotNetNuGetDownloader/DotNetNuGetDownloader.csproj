@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>NuGet Package Downloader for .Net</Title>
+		<Description>Herramienta para descargar e instalar paquetes NuGet.</Description>
+		<RepositoryUrl>https://github.com/vdaular/Net7.NuGetPackageDownloader</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>nuget downloader, nuget, dotnet, dotnet 7</PackageTags>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="5.0.0-preview.5.20278.1" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0-rc.2.22472.3" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="7.0.0-rc.2.22472.3" />
+	  <PackageReference Include="NuGet.Packaging" Version="6.3.1" />
+	  <PackageReference Include="NuGet.PackageManagement" Version="6.3.1" />
+	  <PackageReference Include="NuGet.ProjectModel" Version="6.3.1" />
+	  <PackageReference Include="NuGet.Protocol" Version="6.3.1" />
+	</ItemGroup>
+
+	<Target Name="PrepareReleaseNotes" BeforeTargets="GenerateNuspec">
+		<PropertyGroup>
+			<PackageDescription>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../../RELEASE-NOTES"))</PackageDescription>
+		</PropertyGroup>
+	</Target>
+
+</Project>
