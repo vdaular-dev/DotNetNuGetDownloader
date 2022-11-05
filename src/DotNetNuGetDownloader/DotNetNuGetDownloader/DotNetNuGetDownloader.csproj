@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>NuGet Package Downloader for .Net</Title>
 		<Description>Herramienta para descargar e instalar paquetes NuGet.</Description>
-		<RepositoryUrl>https://github.com/vdaular/Net7.NuGetPackageDownloader</RepositoryUrl>
+		<RepositoryUrl>https://github.com/vdaular/DotNetNuGetDownloader</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>nuget downloader, nuget, dotnet, dotnet 7</PackageTags>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
