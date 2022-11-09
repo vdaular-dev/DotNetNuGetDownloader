@@ -15,11 +15,11 @@ using NuGet.Resolver;
 
 namespace DotNetNuGetDownloader;
 
-public class DotNetNuGetPackageDownloader
+public class DotNetNuGetDownloader
 {
     private readonly ILogger _logger;
 
-    public DotNetNuGetPackageDownloader(ILogger logger = null)
+    public DotNetNuGetDownloader(ILogger logger = null)
     {
         _logger = logger ?? new ConsoleLogger();
     }
